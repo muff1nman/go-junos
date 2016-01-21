@@ -525,7 +525,7 @@ func (j *Junos) ConvertAddressBook() []string {
 			}
 		}
 
-		removeConfig := fmt.Sprintf("delete security zones security-zone %s address-book\n", z.Name)
+		removeConfig := fmt.Sprintf("deactivate security zones security-zone %s address-book\n", z.Name)
 		globalAddressBook = append(globalAddressBook, removeConfig)
 	}
 
